@@ -199,9 +199,10 @@
 
     #mainbody {
         width: 60%;
-        height: 630px;
+        /* height: 630px; */
         /* border:1px solid red; */
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 
@@ -275,7 +276,48 @@
         font-size: 18px;
         color: rgb(24, 23, 23);
     }
-
+    #story_reels{
+        border:1px solid red;
+        margin-top: 100px;
+        margin-bottom: 30px;
+        width:70%
+    }
+    #sr_head{
+        height:60px;
+        width:100%;
+        border:1px solid green;
+        display: flex;
+    }
+    #sr_head>div{
+        width:50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #sr_head>div:nth-child(1){
+        border-bottom: 3px solid blue;
+        color:blue;
+    }
+    #sr_head>div>p>span{
+        margin-right: 10px;
+    }
+    #sr_body{
+        display: flex;
+        padding-top: 5px;
+    }
+    #sr_body>div:nth-child(1){
+        width:30%;
+        height:100px;
+    }
+    #sr_body>div:nth-child(2){
+        width:70%;
+    }
+    #sr_body>div:nth-child(2)>p{
+        margin-bottom: 10px;
+    }
+    #sr_body>div:nth-child(2)>p>span{
+        margin-right: 10px;
+    }
     #rightbody {
         width: 20%;
         /* height:630px; */
@@ -485,6 +527,26 @@
                 </div>
             </div>
             <div id="mainbody">
+                <div id="story_reels">
+                    <div id="sr_head">
+                        <div><p><span><i class="fa-solid fa-book-open"></i></span>Stories</p></div>
+                        <div><p><span><i class="fa-solid fa-camera-retro"></i></span>Reels</p></div>
+                    </div>
+                    <div id="sr_body">
+                        <div>
+                            <div>
+                                <img src="" alt="story"/>
+                                <div><i class="fa-solid fa-plus"></i></div>
+                                <p>Create story</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p><span><i class="fa-solid fa-copy"></i></span>Share everyday moments with friends and family.</p>
+                            <p><span><i class="fa-regular fa-clock"></i></span>Stories disappear after 24 hours.</p>
+                            <p><span><i class="fa-regular fa-comment-dots"></i></span>Replies and reactions are private.</p>
+                        </div>
+                    </div>
+                </div>
                 <div id="post">
                     <div id="head">
                         <div>
