@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,145 +9,166 @@
     <title>profile</title>
 </head>
 <style>
-    *{
-        margin:0;
+    * {
+        margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    #screen{
-        width:100%;
-        height:700px;
-        border:1px solid red;
+
+    #screen {
+        width: 100%;
+        height: 700px;
+        border: 1px solid red;
         z-index: 1;
         position: absolute;
         /* background-color: rgb(240,242,245); */
     }
-    #navbar{
-        height:60px;
-        width:100%;
+
+    #navbar {
+        height: 60px;
+        width: 100%;
         /* border:1px solid green; */
         display: flex;
         justify-content: space-between;
         background-color: white;
         box-shadow: 8px 10px 18px rgb(228, 227, 227);
     }
-    #left_nav{
-        width:25%;
-        height:100%;
+
+    #left_nav {
+        width: 25%;
+        height: 100%;
         /* border:1px solid red; */
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
-    #left_nav>div:nth-child(1){
-        width:20%;
-        height:100%;
+
+    #left_nav>div:nth-child(1) {
+        width: 20%;
+        height: 100%;
         /* border:1px solid blue; */
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    #left_nav>div:nth-child(1)>img{
-        height:80%;
+
+    #left_nav>div:nth-child(1)>img {
+        height: 80%;
         width: 70%;
     }
-    #left_nav>div:nth-child(2){
-        width:70%;
-        height:60%;
+
+    #left_nav>div:nth-child(2) {
+        width: 70%;
+        height: 60%;
         /* border:1px solid grey; */
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         border-radius: 20px;
-        background-color: rgb(240,242,245);
+        background-color: rgb(240, 242, 245);
     }
-    #left_nav>div:nth-child(2)>i{
+
+    #left_nav>div:nth-child(2)>i {
         margin-left: 10px;
-        color:rgb(116, 113, 113)
+        color: rgb(116, 113, 113)
     }
-    #left_nav>div:nth-child(2)>input{
-        width:70%;
-        height:100%;
-        border:none;
+
+    #left_nav>div:nth-child(2)>input {
+        width: 70%;
+        height: 100%;
+        border: none;
         outline: none;
-        background-color: rgb(240,242,245);
+        background-color: rgb(240, 242, 245);
     }
-    #mid_nav{
-        width:25%;
-        height:100%;
+
+    #mid_nav {
+        width: 25%;
+        height: 100%;
         /* border:1px solid red; */
         display: flex;
     }
-    #mid_nav>div{
-        width:33%;
+
+    #mid_nav>div {
+        width: 33%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    #mid_nav>div>i{
+
+    #mid_nav>div>i {
         font-size: 18px;
-        color:rgb(79, 76, 76);
+        color: rgb(79, 76, 76);
     }
-    #mid_nav>div:nth-child(1){
+
+    #mid_nav>div:nth-child(1) {
         border-bottom: 3px solid blue;
     }
-    #mid_nav>div:nth-child(1)>i{
-        color:blue
+
+    #mid_nav>div:nth-child(1)>i {
+        color: blue
     }
-    #right_nav{
-        width:25%;
-        height:100%;
+
+    #right_nav {
+        width: 25%;
+        height: 100%;
         /* border:1px solid red; */
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
-    #right_nav>div:nth-child(1){
-        width:33%;
-        height:35px;
-        border:1px solid grey;
+
+    #right_nav>div:nth-child(1) {
+        width: 33%;
+        height: 35px;
+        border: 1px solid grey;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 20px;
-        background-color: rgb(240,242,245);
-        color:black;
+        background-color: rgb(240, 242, 245);
+        color: black;
         border: none;
     }
-    .icon{
-        width:12%;
-        height:70%;
+
+    .icon {
+        width: 12%;
+        height: 70%;
         /* border:1px solid grey; */
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgb(240,242,245);
+        background-color: rgb(240, 242, 245);
     }
-    .icon>i{
+
+    .icon>i {
         font-size: 22px;
     }
-    #body{
-        width:60%;
-        height:480px;
+
+    #body {
+        width: 60%;
+        height: 480px;
         /* border:1px solid red; */
         margin: auto;
     }
-    #cover-photo{
-        height:450px;
-        width:100%;
+
+    #cover-photo {
+        height: 450px;
+        width: 100%;
         /* border:1px solid green; */
         z-index: 1;
         position: relative;
     }
-    #cover-photo>img{
-        height:100%;
-        width:100%;
+
+    #cover-photo>img {
+        height: 100%;
+        width: 100%;
         opacity: 0.3;
     }
-    #image{
-        height:150px;
-        width:18%;
+
+    #image {
+        height: 150px;
+        width: 18%;
         /* border:1px solid red; */
         border-radius: 50%;
         margin-left: 30px;
@@ -158,55 +180,64 @@
         justify-content: center;
         background-color: white;
     }
-    #image>img{
-        height:90%;
-        width:90%;
-        border:1px solid rgb(194, 193, 193);
+
+    #image>img {
+        height: 90%;
+        width: 90%;
+        border: 1px solid rgb(194, 193, 193);
         border-radius: 50%;
     }
-    #profile{
+
+    #profile {
         display: flex;
         /* border:1px solid blue; */
-        width:75%;
+        width: 75%;
         margin-left: auto;
         margin-top: -55px;
         justify-content: space-between;
     }
-    #profile>div:nth-child(1){
+
+    #profile>div:nth-child(1) {
         font-size: 17px;
     }
-    #profile>div:nth-child(2){
-        width:50%;
+
+    #profile>div:nth-child(2) {
+        width: 50%;
         /* border:1px solid red; */
         display: flex;
         justify-content: space-evenly;
     }
-    #profile>div:nth-child(2)>button{
-        height:40px;
-        width:45%;
-        border:1px solid grey;
+
+    #profile>div:nth-child(2)>button {
+        height: 40px;
+        width: 45%;
+        border: 1px solid grey;
         border-radius: 5px;
-        border:none;
+        border: none;
     }
-    #profile>div:nth-child(2)>button:nth-child(1){
-        background-color: rgb(27,116,228);
+
+    #profile>div:nth-child(2)>button:nth-child(1) {
+        background-color: rgb(27, 116, 228);
         color: white;
         font-weight: bold;
     }
-    #profile>div:nth-child(2)>button:nth-child(2){
-        background-color: rgb(228,230,235);
-        color:black;
+
+    #profile>div:nth-child(2)>button:nth-child(2) {
+        background-color: rgb(228, 230, 235);
+        color: black;
         font-weight: bold;
     }
-    #profile>div:nth-child(2)>button>i{
+
+    #profile>div:nth-child(2)>button>i {
         margin-right: 10px;
     }
-    #edit_profile{
-        width:40%;
+
+    #edit_profile {
+        width: 40%;
         /* margin: auto; */
-        height:600px;
+        height: 600px;
         /* border:2px solid grey; */
-        /* display: none; */
+        display: none;
         position: absolute;
         z-index: 3;
         background-color: white;
@@ -215,117 +246,134 @@
         border-radius: 10px;
         box-shadow: 8px 10px 18px rgb(126, 123, 123);
     }
-    #edit_head{
-        height:50px;
+
+    #edit_head {
+        height: 50px;
         display: flex;
-        border-bottom:1px solid rgb(195, 192, 192);
-    }
-    #edit_head>div:nth-child(1){
-        width:80%;
-        height:100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    #edit_head>div:nth-child(1)>p{
-        font-weight: bold;
-        font-size: 20px;
-    }
-    #edit_head>div:nth-child(2){
-        width:20%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .edit_body{
-        /* height:280px; */
-        width:100%;
-        /* border:1px solid red; */
-    }
-    .edit_body>div:nth-child(1){
-        height:40px;
-        width:100%;
-        padding: 10px;
-    }
-    .edit_body>div:nth-child(1)>p{
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .edit_body>div:nth-child(2){
-        height:150px;
-        width:100%;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* border:1px solid green; */
-    }
-    .edit_body>div:nth-child(2)>img{
-        height:120px;
-        width:25%;
-        border-radius: 50%;
-    }
-    .edit_body>div:nth-child(3){
-        height:50px;
-        width:100%;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* border:1px solid green; */
-    }
-    .edit_body>div:nth-child(3)>form>input:nth-child(1){
-        height:40px;
-        width:250px;
-        padding-left: 10px;
-        border-radius: 10px;
-        border:1px solid grey;
-        outline: none;
-    }
-    .edit_body>div:nth-child(3)>form>input:nth-child(2){
-        height:40px;
-        width:60px;
-        border-radius: 10px;
-        background-color: rgb(88,147,228);
-        color:white;
-        font-weight: bold;
-        border:none
+        border-bottom: 1px solid rgb(195, 192, 192);
     }
 
-    .edit_body2{
+    #edit_head>div:nth-child(1) {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #edit_head>div:nth-child(1)>p {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    #edit_head>div:nth-child(2) {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .edit_body {
         /* height:280px; */
-        width:100%;
+        width: 100%;
+        /* border:1px solid red; */
+    }
+
+    .edit_body>div:nth-child(1) {
+        height: 40px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .edit_body>div:nth-child(1)>p {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .edit_body>div:nth-child(2) {
+        height: 150px;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border:1px solid green; */
+    }
+
+    .edit_body>div:nth-child(2)>img {
+        height: 120px;
+        width: 25%;
+        border-radius: 50%;
+    }
+
+    .edit_body>div:nth-child(3) {
+        height: 50px;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border:1px solid green; */
+    }
+
+    .edit_body>div:nth-child(3)>form>input:nth-child(1) {
+        height: 40px;
+        width: 250px;
+        padding-left: 10px;
+        border-radius: 10px;
+        border: 1px solid grey;
+        outline: none;
+    }
+
+    .edit_body>div:nth-child(3)>form>input:nth-child(2) {
+        height: 40px;
+        width: 60px;
+        border-radius: 10px;
+        background-color: rgb(88, 147, 228);
+        color: white;
+        font-weight: bold;
+        border: none
+    }
+
+    .edit_body2 {
+        /* height:280px; */
+        width: 100%;
         margin-top: 20px;
         padding-bottom: 20px;
         /* border:1px solid red; */
     }
-    .edit_body2>div:nth-child(1){
-        height:40px;
-        width:100%;
+
+    .edit_body2>div:nth-child(1) {
+        height: 40px;
+        width: 100%;
         padding: 10px;
     }
-    .edit_body2>div:nth-child(1)>p{
+
+    .edit_body2>div:nth-child(1)>p {
         font-size: 20px;
         font-weight: bold;
     }
-    .edit_body2>div:nth-child(2){
-        height:200px;
-        width:100%;
+
+    .edit_body2>div:nth-child(2) {
+        height: 200px;
+        width: 100%;
         padding: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         /* border:1px solid green; */
     }
-    .edit_body2>div:nth-child(2)>img{
-        height:180px;
-        width:90%;
+
+    .edit_body2>div:nth-child(2)>img {
+        height: 180px;
+        width: 90%;
         border-radius: 10px;
-        opacity:0.4;
+        opacity: 0.4;
     }
-    .edit_body2>div:nth-child(3){
-        height:50px;
-        width:100%;
+
+    .edit_body2>div:nth-child(3) {
+        height: 50px;
+        width: 100%;
         padding: 10px;
         display: flex;
         align-items: center;
@@ -333,64 +381,77 @@
         margin-bottom: 20px;
         /* border:1px solid green; */
     }
-    .edit_body2>div:nth-child(3)>form>input:nth-child(1){
-        height:40px;
-        width:250px;
+
+    .edit_body2>div:nth-child(3)>form>input:nth-child(1) {
+        height: 40px;
+        width: 250px;
         padding-left: 10px;
         border-radius: 10px;
-        border:1px solid grey;
+        border: 1px solid grey;
         outline: none;
     }
-    .edit_body2>div:nth-child(3)>form>input:nth-child(2){
-        height:40px;
-        width:60px;
+
+    .edit_body2>div:nth-child(3)>form>input:nth-child(2) {
+        height: 40px;
+        width: 60px;
         border-radius: 10px;
-        background-color: rgb(88,147,228);
-        color:white;
+        background-color: rgb(88, 147, 228);
+        color: white;
         font-weight: bold;
-        border:none
+        border: none
     }
-    @media screen and (max-width:750px){
-        #navbar>div:nth-child(2){
-            width:25%;
+
+    @media screen and (max-width:750px) {
+        #navbar>div:nth-child(2) {
+            width: 25%;
         }
-        #left_nav{
-            width:10%;
+
+        #left_nav {
+            width: 10%;
         }
-        #left_nav>div:nth-child(1){
-            width:80%;
+
+        #left_nav>div:nth-child(1) {
+            width: 80%;
         }
-        #left_nav>div:nth-child(2){
+
+        #left_nav>div:nth-child(2) {
             display: none;
         }
-        #right_nav{
-            width:25%;
+
+        #right_nav {
+            width: 25%;
         }
-        #right_nav>div:nth-child(1){
+
+        #right_nav>div:nth-child(1) {
             display: none;
         }
-        .icon{
-            width:20%;
+
+        .icon {
+            width: 20%;
         }
-        #body{
-            width:95%;
+
+        #body {
+            width: 95%;
         }
-        #edit_profile{
-            width:70%;
+
+        #edit_profile {
+            width: 70%;
             margin-left: 120px;
         }
     }
 </style>
+
 <body>
     <div id="screen">
         <div id="navbar">
             <div id="left_nav">
                 <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png" alt="logo"/>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png"
+                        alt="logo" />
                 </div>
                 <div>
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" placeholder="Search facebook"/>
+                    <input type="search" placeholder="Search facebook" />
                 </div>
             </div>
             <div id="mid_nav">
@@ -425,14 +486,16 @@
         </div>
         <div id="body">
             <div id="cover-photo">
-                <img src="https://st2.depositphotos.com/2477851/9521/i/600/depositphotos_95218136-stock-photo-white-grey-gradient-abstract-background.jpg" alt="cover-photo"/>
+                <img src="https://st2.depositphotos.com/2477851/9521/i/600/depositphotos_95218136-stock-photo-white-grey-gradient-abstract-background.jpg"
+                    alt="cover-photo" />
             </div>
             <div id="image">
-                <img src="https://media.istockphoto.com/id/1298261537/vector/blank-man-profile-head-icon-placeholder.jpg?s=612x612&w=0&k=20&c=CeT1RVWZzQDay4t54ookMaFsdi7ZHVFg2Y5v7hxigCA=" alt="profile-image"/>
+                <img src="https://media.istockphoto.com/id/1298261537/vector/blank-man-profile-head-icon-placeholder.jpg?s=612x612&w=0&k=20&c=CeT1RVWZzQDay4t54ookMaFsdi7ZHVFg2Y5v7hxigCA="
+                    alt="profile-image" />
             </div>
             <div id="profile">
                 <div>
-                <h1>Name here</h1>
+                    <h1>Name here</h1>
                 </div>
                 <div>
                     <button><i class="fa-solid fa-plus"></i>Add to Story</button>
@@ -440,24 +503,27 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
     <div id="edit_profile">
         <div id="edit_head">
-            <div><p>Edit Profile</p></div>
+            <div>
+                <p>Edit Profile</p>
+            </div>
             <div><i onclick="myFunction()" class="fa-solid fa-xmark"></i></div>
         </div>
         <div class="edit_body">
             <div>
                 <p>Profile picture</p>
             </div>
-            <div>
-                <img src="https://media.istockphoto.com/id/1298261537/vector/blank-man-profile-head-icon-placeholder.jpg?s=612x612&w=0&k=20&c=CeT1RVWZzQDay4t54ookMaFsdi7ZHVFg2Y5v7hxigCA=" alt="profile"/>
+            <div id="change-Profile">
+                <img src="https://media.istockphoto.com/id/1298261537/vector/blank-man-profile-head-icon-placeholder.jpg?s=612x612&w=0&k=20&c=CeT1RVWZzQDay4t54ookMaFsdi7ZHVFg2Y5v7hxigCA="
+                    alt="profile" />
             </div>
             <div>
-                <form>
-                    <input id="profile_image" type="text" placeholder="Enter Profile Image"/>
-                    <input type="submit" value="edit"/>
+                <form onsubmit="edit_p(event)">
+                    <input id="profile_image" type="text" placeholder="Enter Profile Image" />
+                    <input type="submit" value="edit" />
                 </form>
             </div>
         </div>
@@ -465,26 +531,92 @@
             <div>
                 <p>Cover Photo</p>
             </div>
-            <div>
-                <img src="data:image/jpeg;base64,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" alt="profile"/>
+            <div id="change_Cover">
+                <img src="data:image/jpeg;base64,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"
+                    alt="profile" />
             </div>
             <div>
-                <form>
-                    <input id="profile_image" type="text" placeholder="Enter cover photo"/>
-                    <input type="submit" value="edit"/>
+                <form onsubmit="edit_c(event)">
+                    <input id="cover_image" type="text" placeholder="Enter cover photo" />
+                    <input type="submit" value="edit" />
                 </form>
             </div>
         </div>
     </div>
+    <script src="./server.js"></script>
     <script>
-        function myFunction() {
-          var x = document.getElementById("edit_profile");
-          if (x.style.display === "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "none";
-          }
+        window.onload = function () {
+            var profileImage = JSON.parse(localStorage.getItem("facebook_profile"));
+            var coverImage = JSON.parse(localStorage.getItem("facebook_cover"));
+            var profile_Info = {profile:profileImage,cover:coverImage}
+            console.log(profile_Info, "profile info here");
+
+            var userdata = JSON.parse(localStorage.getItem("Facebook_users"));
+            var currentUser = JSON.parse(localStorage.getItem("Facebook_login"));
+            if (!!currentUser) {
+                for (var i = 0; i < userdata.length; i++) {
+                    if (currentUser.uemail == userdata[i].uemail) {
+                        // alert("got");
+                        if (userdata[i].user_Info === undefined) {
+                            // alert("undefined")
+                            userdata[i].user_Info = "";
+                        }
+                        else {
+                            // alert("inside else")
+                            userdata[i].user_Info = profile_Info;
+                        }
+                    }
+                }
+                localStorage.setItem("Facebook_users", JSON.stringify(userdata))
+            }
+
+
+            var divForPfofile=document.getElementById("change-Profile");
+            var loginUser;
+            for(var i=0;i<userdata.length;i++){
+                if(currentUser.uemail == userdata[i].uemail){
+                    loginUser=userdata[i];
+                }
+            }
+            console.log(loginUser.user_Info.profile)
+            var C_profile=`<img src="${loginUser.user_Info.profile}"
+                    alt="profile" />`;
+            divForPfofile.innerHTML=C_profile;
+
+            var divForCover=document.getElementById("change_Cover");
+            var C_cover=`<img src="${loginUser.user_Info.cover}"
+                    alt="profile" />`;
+                    divForCover.innerHTML=C_cover;
+
+            var Profile_save=document.getElementById("body");
+            var Profile_Sructure=`<div id="cover-photo">
+                <img src="${loginUser.user_Info.cover}"
+                    alt="cover-photo" />
+            </div>
+            <div id="image">
+                <img src="${loginUser.user_Info.profile}"
+                    alt="profile-image" />
+            </div>
+            <div id="profile">
+                <div>
+                    <h1>${loginUser.uname}</h1>
+                </div>
+                <div>
+                    <button><i class="fa-solid fa-plus"></i>Add to Story</button>
+                    <button onclick="myFunction()"><i class="fa-solid fa-pen"></i>Edit profile</button>
+                </div>
+            </div>`;
+            Profile_save.innerHTML=Profile_Sructure;
         }
-        </script>
+        function myFunction() {
+            var x = document.getElementById("edit_profile");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
 </body>
+
 </html>

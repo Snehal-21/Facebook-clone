@@ -71,3 +71,22 @@ function login(event){
         console.log("Both fields are required!");
     }
 }
+
+function edit_p(event){
+    event.preventDefault();
+ 
+    var image=document.getElementById("profile_image").value;
+    console.log(image)
+    if(image){
+        localStorage.setItem("facebook_profile",JSON.stringify(image));
+    }
+
+}
+
+function edit_c(event){
+    event.preventDefault();
+    var coverImage=document.getElementById("cover_image").value;
+    if(coverImage){
+        localStorage.setItem("facebook_cover",JSON.stringify(coverImage));
+    }
+}

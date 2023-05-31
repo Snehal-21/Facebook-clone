@@ -1,314 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <title>Home</title>
 </head>
 <style>
-    *{
-        margin:0;
+    * {
+        margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    #screen{
-        width:100%;
-        height:700px;
-        border:1px solid red;
-        background-color: rgb(240,242,245);
+
+    #screen {
+        width: 100%;
+        height: 700px;
+        border: 1px solid red;
+        background-color: rgb(240, 242, 245);
     }
-    #navbar{
-        height:60px;
-        width:100%;
+
+    #navbar {
+        height: 60px;
+        width: 100%;
         /* border:1px solid green; */
         display: flex;
         justify-content: space-between;
         background-color: white;
         box-shadow: 8px 10px 18px rgb(228, 227, 227);
     }
-    #left_nav{
-        width:25%;
-        height:100%;
+
+    #left_nav {
+        width: 25%;
+        height: 100%;
         /* border:1px solid red; */
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
-    #left_nav>div:nth-child(1){
-        width:20%;
-        height:100%;
+
+    #left_nav>div:nth-child(1) {
+        width: 20%;
+        height: 100%;
         /* border:1px solid blue; */
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    #left_nav>div:nth-child(1)>img{
-        height:80%;
+
+    #left_nav>div:nth-child(1)>img {
+        height: 80%;
         width: 70%;
     }
-    #left_nav>div:nth-child(2){
-        width:70%;
-        height:60%;
+
+    #left_nav>div:nth-child(2) {
+        width: 70%;
+        height: 60%;
         /* border:1px solid grey; */
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         border-radius: 20px;
-        background-color: rgb(240,242,245);
+        background-color: rgb(240, 242, 245);
     }
-    #left_nav>div:nth-child(2)>i{
+
+    #left_nav>div:nth-child(2)>i {
         margin-left: 10px;
-        color:rgb(116, 113, 113)
+        color: rgb(116, 113, 113)
     }
-    #left_nav>div:nth-child(2)>input{
-        width:70%;
-        height:100%;
-        border:none;
+
+    #left_nav>div:nth-child(2)>input {
+        width: 70%;
+        height: 100%;
+        border: none;
         outline: none;
-        background-color: rgb(240,242,245);
+        background-color: rgb(240, 242, 245);
     }
-    #mid_nav{
-        width:25%;
-        height:100%;
+
+    #mid_nav {
+        width: 25%;
+        height: 100%;
         /* border:1px solid red; */
         display: flex;
     }
-    #mid_nav>div{
-        width:33%;
+
+    #mid_nav>div {
+        width: 33%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    #mid_nav>div>i{
+
+    #mid_nav>div>i {
         font-size: 18px;
-        color:rgb(79, 76, 76);
+        color: rgb(79, 76, 76);
     }
-    #mid_nav>div:nth-child(1){
+
+    #mid_nav>div:nth-child(1) {
         border-bottom: 3px solid blue;
     }
-    #mid_nav>div:nth-child(1)>i{
-        color:blue
+
+    #mid_nav>div:nth-child(1)>i {
+        color: blue
     }
-    #right_nav{
-        width:25%;
-        height:100%;
+
+    #right_nav {
+        width: 25%;
+        height: 100%;
         /* border:1px solid red; */
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
-    #right_nav>div:nth-child(1){
-        width:33%;
-        height:35px;
-        border:1px solid grey;
+
+    #right_nav>div:nth-child(1) {
+        width: 33%;
+        height: 35px;
+        border: 1px solid grey;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 20px;
-        background-color: rgb(240,242,245);
-        color:black;
+        background-color: rgb(240, 242, 245);
+        color: black;
         border: none;
     }
-    .icon{
-        width:12%;
-        height:70%;
+
+    .icon {
+        width: 12%;
+        height: 70%;
         /* border:1px solid grey; */
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgb(240,242,245);
+        background-color: rgb(240, 242, 245);
     }
-    .icon>i{
+
+    .icon>i {
         font-size: 22px;
     }
-    #body{
-        width:100%;
-        height:630px;
+
+    #body {
+        width: 100%;
+        height: 630px;
         /* border:1px solid green; */
         display: flex;
         margin-top: 20px;
-        background-color: rgb(240,242,245);
+        background-color: rgb(240, 242, 245);
     }
-    #sidebar{
-        width:20%;
-        height:630px;
+
+    #sidebar {
+        width: 20%;
+        height: 630px;
         /* border:1px solid red; */
         padding: 10px;
         /* padding-top: 10px; */
         /* margin-top: 10px; */
     }
-    #sidebar>div{
-        height:55px;
-        width:100%;
+
+    #sidebar>div {
+        height: 55px;
+        width: 100%;
         /* border:1px solid grey; */
         display: flex;
         align-items: center;
         justify-content: space-between;
         border-radius: 10px;
     }
-    #sidebar>div:hover{
-        background-color: rgb(222,222,222);
+
+    #sidebar>div:hover {
+        background-color: rgb(222, 222, 222);
     }
-    #sidebar>div>div:nth-child(1){
-        width:18%;
-        height:80%;
+
+    #sidebar>div>div:nth-child(1) {
+        width: 18%;
+        height: 80%;
         /* border:1px solid red; */
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    #sidebar>div>div:nth-child(1)>i{
+
+    #sidebar>div>div:nth-child(1)>i {
         font-size: 20px;
     }
-    #sidebar>div>div:nth-child(2){
-        width:75%;
-        height:100%;
+
+    #sidebar>div>div:nth-child(2) {
+        width: 75%;
+        height: 100%;
         /* border:1px solid red; */
         display: flex;
         align-items: center;
     }
-    #mainbody{
-        width:60%;
-        height:630px;
+
+    #mainbody {
+        width: 60%;
+        height: 630px;
         /* border:1px solid red; */
         display: flex;
         justify-content: center;
     }
-    #post{
-        height:550px;
-        width:70%;
+
+    #post {
+        height: 550px;
+        width: 70%;
         /* border: 1px solid red; */
         background-color: white;
         border-radius: 10px;
     }
-    #head{
-        height:100px;
-        width:100%;
+
+    #head {
+        height: 100px;
+        width: 100%;
         /* border:1px solid grey; */
     }
-    #head>div:nth-child(1){
+
+    #head>div:nth-child(1) {
         display: flex;
-        height:60px;
+        height: 60px;
         /* border:1px solid blue; */
         align-items: center;
         padding-left: 10px;
     }
-    #head>div:nth-child(1)>img{
-        height:100%;
-        width:12%;
+
+    #head>div:nth-child(1)>img {
+        height: 100%;
+        width: 12%;
         /* border:1px solid grey; */
         border-radius: 50%;
         margin-right: 20px;
     }
-    #head>div:nth-child(2){
+
+    #head>div:nth-child(2) {
         padding-left: 20px;
         display: flex;
         align-items: center;
-        height:40px;
+        height: 40px;
     }
-    #post-image{
-        height:400px;
-        width:100%;
+
+    #post-image {
+        height: 400px;
+        width: 100%;
         /* border:1px solid green; */
     }
-    #post-image>img{
-        height:100%;
-        width:100%;
+
+    #post-image>img {
+        height: 100%;
+        width: 100%;
     }
-    #actions{
+
+    #actions {
         height: 50px;
-        width:100%;
+        width: 100%;
         display: flex;
         /* border: 1px solid blue; */
     }
-    #actions>div{
-        width:33%;
+
+    #actions>div {
+        width: 33%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    #actions>div>p>span{
+
+    #actions>div>p>span {
         margin-right: 10px;
     }
-    #actions>div>p{
+
+    #actions>div>p {
         font-size: 18px;
-        color:rgb(24, 23, 23);
+        color: rgb(24, 23, 23);
     }
-    #rightbody{
-        width:20%;
+
+    #rightbody {
+        width: 20%;
         /* height:630px; */
         /* border:1px solid green; */
         padding-right: 20px;
     }
-    #rightbody>p{
+
+    #rightbody>p {
         font-size: 20px;
-        color:rgb(93, 88, 88);
+        color: rgb(93, 88, 88);
     }
-    #rightbody>div{
-        height:50px;
-        width:100%;
+
+    #rightbody>div {
+        height: 50px;
+        width: 100%;
         /* border:1px solid green; */
         margin-top: 10px;
         display: flex;
         align-items: center;
         padding-left: 5px;
     }
-    #rightbody>div:hover{
-        background-color:rgb(222,222,222) ;
+
+    #rightbody>div:hover {
+        background-color: rgb(222, 222, 222);
     }
-    #rightbody>div>div:nth-child(1){
-        height:70%;
-        width:14%;
+
+    #rightbody>div>div:nth-child(1) {
+        height: 70%;
+        width: 14%;
         /* border:1px solid grey; */
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-right: 20px;
-        background-color:rgb(198, 196, 196) ;
+        background-color: rgb(198, 196, 196);
     }
-    #rightbody>div>div:nth-child(2)>p{
+
+    #rightbody>div>div:nth-child(2)>p {
         font-weight: bold;
     }
-    @media screen and (max-width:750px){
-        #navbar>div:nth-child(2){
-            width:25%;
+
+    @media screen and (max-width:750px) {
+        #navbar>div:nth-child(2) {
+            width: 25%;
         }
-        #left_nav{
-            width:10%;
-            border:5px solid yellow
+
+        #left_nav {
+            width: 10%;
+            border: 5px solid yellow
         }
-        #left_nav>div:nth-child(1){
-            width:80%;
+
+        #left_nav>div:nth-child(1) {
+            width: 80%;
         }
-        #left_nav>div:nth-child(2){
+
+        #left_nav>div:nth-child(2) {
             display: none;
         }
-        #right_nav{
-            width:25%;
+
+        #right_nav {
+            width: 25%;
         }
-        #right_nav>div:nth-child(1){
+
+        #right_nav>div:nth-child(1) {
             display: none;
         }
-        .icon{
-            width:20%;
+
+        .icon {
+            width: 20%;
         }
     }
 </style>
+
 <body>
     <div id="screen">
         <div id="navbar">
             <div id="left_nav">
                 <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png" alt="logo"/>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png"
+                        alt="logo" />
                 </div>
                 <div>
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" placeholder="Search facebook"/>
+                    <input type="search" placeholder="Search facebook" />
                 </div>
             </div>
             <div id="mid_nav">
@@ -335,7 +387,7 @@
                 <div class="icon">
                     <i class="fa-solid fa-bell"></i>
                 </div>
-                <div class="icon">
+                <div class="icon" id="nav_profile">
                     <i class="fa-regular fa-user"></i>
                     <img src="" alt="" />
                 </div>
@@ -343,17 +395,17 @@
         </div>
         <div id="body">
             <div id="sidebar">
-                <div onclick="window.location.href='./profile.html'">
+                <div id="switch" onclick="window.location.href='./profile.html'">
                     <div>
                         <i class="fa-regular fa-user"></i>
                     </div>
-                    <div>
+                    <div id="name">
                         <p>Profile</p>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <i style="color:rgb(62, 62, 202)"; class="fa-solid fa-user-group"></i>
+                        <i style="color:rgb(62, 62, 202)" ; class="fa-solid fa-user-group"></i>
                     </div>
                     <div>
                         <p>Friends</p>
@@ -361,7 +413,7 @@
                 </div>
                 <div>
                     <div>
-                        <i style="color:rgb(62, 62, 202)"; class="fa-regular fa-newspaper"></i>
+                        <i style="color:rgb(62, 62, 202)" ; class="fa-regular fa-newspaper"></i>
                     </div>
                     <div>
                         <p>Feeds</p>
@@ -369,7 +421,7 @@
                 </div>
                 <div>
                     <div>
-                        <i style="color:rgb(62, 62, 202)"; class="fa-brands fa-facebook"></i>
+                        <i style="color:rgb(62, 62, 202)" ; class="fa-brands fa-facebook"></i>
                     </div>
                     <div>
                         <p>Welcome</p>
@@ -377,7 +429,7 @@
                 </div>
                 <div>
                     <div>
-                        <i style="color:rgb(62, 62, 202)"; class="fa-solid fa-people-group"></i>
+                        <i style="color:rgb(62, 62, 202)" ; class="fa-solid fa-people-group"></i>
                     </div>
                     <div>
                         <p>Groups</p>
@@ -385,7 +437,7 @@
                 </div>
                 <div>
                     <div>
-                        <i style="color:rgb(62, 62, 202)"; class="fa-solid fa-store"></i>
+                        <i style="color:rgb(62, 62, 202)" ; class="fa-solid fa-store"></i>
                     </div>
                     <div>
                         <p>Marketplace</p>
@@ -393,7 +445,7 @@
                 </div>
                 <div>
                     <div>
-                        <i style="color:rgb(62, 62, 202)"; class="fa-solid fa-camera-retro"></i>
+                        <i style="color:rgb(62, 62, 202)" ; class="fa-solid fa-camera-retro"></i>
                     </div>
                     <div>
                         <p>Watch</p>
@@ -401,7 +453,7 @@
                 </div>
                 <div>
                     <div>
-                        <i style="color:rgb(62, 62, 202)"; class="fa-solid fa-clock-rotate-left"></i>
+                        <i style="color:rgb(62, 62, 202)" ; class="fa-solid fa-clock-rotate-left"></i>
                     </div>
                     <div>
                         <p>Memories</p>
@@ -409,7 +461,7 @@
                 </div>
                 <div>
                     <div>
-                        <i style="color:rgb(190, 62, 202)"; class="fa-solid fa-bookmark"></i>
+                        <i style="color:rgb(190, 62, 202)" ; class="fa-solid fa-bookmark"></i>
                     </div>
                     <div>
                         <p>Saved</p>
@@ -417,10 +469,18 @@
                 </div>
                 <div>
                     <div>
-                        <i style="color:rgb(62, 62, 202)"; class="fa-brands fa-facebook-messenger"></i>
+                        <i style="color:rgb(62, 62, 202)" ; class="fa-brands fa-facebook-messenger"></i>
                     </div>
                     <div>
                         <p>Messenger</p>
+                    </div>
+                </div>
+                <div onclick="logout()">
+                    <div>
+                        <i style="color:rgb(62, 62, 202)" ; class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </div>
+                    <div>
+                        <p>Logout</p>
                     </div>
                 </div>
             </div>
@@ -428,7 +488,8 @@
                 <div id="post">
                     <div id="head">
                         <div>
-                            <img src="https://static.vecteezy.com/system/resources/previews/009/734/564/original/default-avatar-profile-icon-of-social-media-user-vector.jpg" alt="image"/>
+                            <img src="https://static.vecteezy.com/system/resources/previews/009/734/564/original/default-avatar-profile-icon-of-social-media-user-vector.jpg"
+                                alt="image" />
                             <p>name</p>
                         </div>
                         <div>
@@ -463,5 +524,42 @@
         </div>
     </div>
     <script src="https://kit.fontawesome.com/43b779b2fa.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function () {
+          
+            var userdata = JSON.parse(localStorage.getItem("Facebook_users"));
+            var currentUser = JSON.parse(localStorage.getItem("Facebook_login"));
+            var loginUser;
+            for(var i=0;i<userdata.length;i++){
+                if(currentUser.uemail == userdata[i].uemail){
+                    loginUser=userdata[i];
+                }
+            }
+
+            var div_login=document.getElementById("name");
+            var change=` <p>${loginUser.uname}</p>`;
+            div_login.innerHTML=change;
+            var divforsideProfile=document.getElementById("switch");
+            var sideProfile_Structure=`<div>
+                        <img style="width:100%;height:100%;border-radius:50%" src="${loginUser.user_Info.profile}" alt="image"/>
+                    </div>
+                    <div>
+                        <p>${loginUser.uname}</p>
+                    </div>`;
+            divforsideProfile.innerHTML=sideProfile_Structure;
+
+            var divforNav_Profile=document.getElementById("nav_profile");
+            var navProfile_Structure=`<img style="width:100%;height:100%;border-radius:50%" src="${loginUser.user_Info.profile}" alt="image" />`;
+            divforNav_Profile.innerHTML=navProfile_Structure;
+
+        }
+        function logout(){
+        alert("logout successful.")
+        localStorage.removeItem("Facebook_login");
+        window.location.reload();
+        window.location.href='./login.html';
+    }
+    </script>
 </body>
+
 </html>
