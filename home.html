@@ -469,7 +469,7 @@
     #crate_post{
         width: 35%;
         /* margin: auto; */
-        height: 500px;
+        height: 550px;
         border:1px solid rgb(245, 242, 242);
         /* display: none; */
         position: absolute;
@@ -502,6 +502,75 @@
     }
     #create_head>span{
         margin-left: 200px;
+    }
+    #create_info{
+        padding: 10px;
+    }
+    #create_info>div:nth-child(1){
+        height:60px;
+        width: 100%;
+        /* border:1px solid red; */
+        display: flex;
+    }
+    #create_info>div:nth-child(1)>div:nth-child(1){
+        width:20%;
+        height:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #create_info>div:nth-child(1)>div:nth-child(1)>img{
+        height:100%;
+        width: 65%;
+        border-radius: 50%;
+        /* border:1px solid grey; */
+    }
+    #create_info>div:nth-child(1)>div:nth-child(2){
+        width:70%;
+        height:100%;
+        display: flex;
+        align-items: center;
+    }
+    #create_info>div:nth-child(2){
+        margin-top: 10px;
+    }
+    #create_info>div:nth-child(2)>form>input:nth-child(1){
+        width:100%;
+        height:40px;
+        border: none;
+        outline: none;
+    }
+    #create_info>div:nth-child(2)>form>div{
+        height:250px;
+        width:100%;
+        border:1px solid rgb(207, 205, 205);
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    #create_info>div:nth-child(2)>form>div>img{
+        height:100%;
+        width:100%;
+        border-radius: 10px;
+    }
+    #create_info>div:nth-child(2)>form>input:nth-child(3){
+        width:100%;
+        height:40px;
+        border-radius: 10px;
+        border:1px solid rgb(207, 205, 205);
+        padding-left: 20px;
+        outline: none;
+        margin-bottom: 10px;
+    }
+    #create_info>div:nth-child(2)>form>input:nth-child(4){
+        width:50%;
+        height:40px;
+        border-radius: 20px;
+        border:none;
+        background-color: rgb(27,116,228);
+        color: white;
+        font-weight: bold;
+        margin-left: 120px;
     }
     @media screen and (max-width:750px) {
         #navbar>div:nth-child(2) {
@@ -743,33 +812,60 @@
         <div id="crate_post">
             <div id="create_head">
                 <div><p>Create Post</p></div>
-                <div><i class="fa-solid fa-xmark"></i></div>
+                <div onclick="myFunction()"><i class="fa-solid fa-xmark"></i></div>
             </div>
             <div id="create_info">
-                <div>
-                    <div><img src="" alt=""/> </div>
-                    <div><p></p></div>
+                <div id="post-info">
+                    <div><img src="https://static.vecteezy.com/system/resources/previews/009/734/564/original/default-avatar-profile-icon-of-social-media-user-vector.jpg" alt="image"/> </div>
+                    <div><p>Name</p></div>
                 </div>
                 <div>
-                    <form>
-                        <input id="des" 
+                    <form onsubmit="post(event)"> 
+                        <input id="des" type="text" placeholder="What's on your mind?"/>
+                        <div id="postss"><img src="https://img.freepik.com/free-vector/white-blurred-background_1034-249.jpg" alt="posts"/></div>
+                         <input id="post_image" type="text" placeholder="Add photos or videos"/>
+                         <input type="submit" value="Post"/>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-   
+   <script src="./server.js"></script>
     <script src="https://kit.fontawesome.com/43b779b2fa.js" crossorigin="anonymous"></script>
     <script>
         window.onload = function () {
           
             var userdata = JSON.parse(localStorage.getItem("Facebook_users"));
             var currentUser = JSON.parse(localStorage.getItem("Facebook_login"));
+            var posts_Data=JSON.parse(localStorage.getItem("Facebook_post"));
             var loginUser;
             for(var i=0;i<userdata.length;i++){
                 if(currentUser.uemail == userdata[i].uemail){
                     loginUser=userdata[i];
                 }
+            }
+
+            if (!!currentUser) {
+                for (var i = 0; i < userdata.length; i++) {
+                    if (currentUser.uemail == userdata[i].uemail) {
+                        // alert("got");
+                        if (userdata[i].user_posts === undefined) {
+                            // alert("undefined")
+                            userdata[i].user_posts = [];
+                        }
+                        else {
+                            alert("push")
+                            userdata[i].user_posts.push(posts_Data);
+                        }
+                    }
+                }
+                localStorage.setItem("Facebook_users", JSON.stringify(userdata));
+
+
+               
+                var div_posts=document.getElementById("postss");
+                var posts_Structure=`<img src="" alt="posts"/>`;
+                div_posts.innerHTML=posts_Structure;
             }
 
             var div_login=document.getElementById("name");
@@ -797,6 +893,13 @@
             var divMind_image=document.getElementById("mind_image");
             var mindImage_structure=`<img src="${loginUser.user_Info.profile}" alt="image"/>`;
             divMind_image.innerHTML=mindImage_structure;
+
+            var div_postInfo=document.getElementById("post-info");
+            var postInfo_structure=`<div><img src="${loginUser.user_Info.profile}" alt="image"/> </div>
+                    <div><p>${loginUser.uname}</p></div>`;
+            div_postInfo.innerHTML=postInfo_structure;
+
+            
 
         }
         function logout(){

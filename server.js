@@ -90,3 +90,15 @@ function edit_c(event){
         localStorage.setItem("facebook_cover",JSON.stringify(coverImage));
     }
 }
+
+function post(event){
+    event.preventDefault();
+
+    var des=document.getElementById("des").value;
+    var post_image=document.getElementById("post_image").value;
+
+    var post_Data={des,post_image};
+    localStorage.setItem("Facebook_post",JSON.stringify(post_Data));
+    document.getElementById("des").value='';
+    document.getElementById("post_image").value='';
+}
