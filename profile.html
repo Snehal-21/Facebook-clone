@@ -571,7 +571,7 @@
             }
 
 
-            var divForPfofile=document.getElementById("change-Profile");
+            var divForPfofile=document.querySelector(".edit_body");
             var loginUser;
             for(var i=0;i<userdata.length;i++){
                 if(currentUser.uemail == userdata[i].uemail){
@@ -579,13 +579,35 @@
                 }
             }
             console.log(loginUser.user_Info.profile)
-            var C_profile=`<img src="${loginUser.user_Info.profile}"
-                    alt="profile" />`;
+            var C_profile=` <div>
+                <p>Profile picture</p>
+            </div>
+            <div id="change-Profile">
+                <img src="${loginUser.user_Info.profile}"
+                    alt="profile" />
+            </div>
+            <div>
+                <form onsubmit="edit_p(event)">
+                    <input id="profile_image" type="text" placeholder="Enter Profile Image" />
+                    <input type="submit" value="edit" />
+                </form>
+            </div>`;
             divForPfofile.innerHTML=C_profile;
 
-            var divForCover=document.getElementById("change_Cover");
-            var C_cover=`<img src="${loginUser.user_Info.cover}"
-                    alt="profile" />`;
+            var divForCover=document.querySelector(".edit_body2");
+            var C_cover=` <div>
+                <p>Cover Photo</p>
+            </div>
+            <div id="change_Cover">
+                <img src="${loginUser.user_Info.cover}"
+                    alt="profile" />
+            </div>
+            <div>
+                <form onsubmit="edit_c(event)">
+                    <input id="cover_image" type="text" placeholder="Enter cover photo" />
+                    <input type="submit" value="edit" />
+                </form>
+            </div>`;
                     divForCover.innerHTML=C_cover;
 
             var Profile_save=document.getElementById("body");

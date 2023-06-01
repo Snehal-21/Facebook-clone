@@ -98,7 +98,9 @@ function post(event){
     var post_image=document.getElementById("post_image").value;
 
     var post_Data={des,post_image};
-    localStorage.setItem("Facebook_post",JSON.stringify(post_Data));
+    var post_storage=JSON.parse(localStorage.getItem("Facebook_post")) || [];
+    post_storage.push(post_Data);
+    localStorage.setItem("Facebook_post",JSON.stringify(post_storage));
     document.getElementById("des").value='';
     document.getElementById("post_image").value='';
 }

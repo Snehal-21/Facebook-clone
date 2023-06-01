@@ -471,7 +471,7 @@
         /* margin: auto; */
         height: 550px;
         border:1px solid rgb(245, 242, 242);
-        /* display: none; */
+        display: none;
         position: absolute;
         z-index: 3;
         background-color: white;
@@ -774,7 +774,7 @@
                 </div>
                 <div id="post">
                     <div id="head">
-                        <div>
+                        <div >
                             <img src="https://static.vecteezy.com/system/resources/previews/009/734/564/original/default-avatar-profile-icon-of-social-media-user-vector.jpg"
                                 alt="image" />
                             <p>name</p>
@@ -839,6 +839,7 @@
             var currentUser = JSON.parse(localStorage.getItem("Facebook_login"));
             var posts_Data=JSON.parse(localStorage.getItem("Facebook_post"));
             var loginUser;
+            var current_User;
             for(var i=0;i<userdata.length;i++){
                 if(currentUser.uemail == userdata[i].uemail){
                     loginUser=userdata[i];
@@ -851,26 +852,56 @@
                         // alert("got");
                         if (userdata[i].user_posts === undefined) {
                             // alert("undefined")
-                            userdata[i].user_posts = [];
+                            userdata[i].user_posts ='';
                         }
                         else {
-                            alert("push")
-                            userdata[i].user_posts.push(posts_Data);
+                            // alert("push")
+                            userdata[i].user_posts=posts_Data;
+                            current_User=userdata[i];
                         }
                     }
                 }
-                localStorage.setItem("Facebook_users", JSON.stringify(userdata));
-
-
-               
-                var div_posts=document.getElementById("postss");
-                var posts_Structure=`<img src="" alt="posts"/>`;
-                div_posts.innerHTML=posts_Structure;
             }
+                localStorage.setItem("Facebook_users", JSON.stringify(userdata));
+            
+        
+
+            console.log(current_User.user_posts,"current");
+            // var div_posts=document.getElementById("postss");
+            // var posts_structure=`<img src="${current_User.user_posts.post_image}" alt="posts"/>`;
+            // div_posts.innerHTML=posts_structure;
+            var posts_struc;
+            var divTopost=document.getElementById("post");
+            posts_struc=`   <div id="head">
+                        <div >
+                            <img src="${current_User.user_Info.profile}"
+                                alt="image" />
+                            <p>${current_User.uname}</p>
+                        </div>
+                        <div>
+                            <p>${current_User.user_posts[0].des}</p>
+                        </div>
+                    </div>
+                    <div id="post-image">
+                        <img src="${current_User.user_posts[0].post_image}" alt="image"/>
+                    </div>
+                    <div id="actions">
+                        <div>
+                            <p><span><i class="fa-solid fa-thumbs-up"></i></span>Like</p>
+                        </div>
+                        <div>
+                            <p><span><i class="fa-regular fa-message"></i></span>Comment</p>
+                        </div>
+                        <div>
+                            <p><span><i class="fa-solid fa-share"></i></span>Share</p>
+                        </div>
+                    </div>`;
+            divTopost.innerHTML=posts_struc;
 
             var div_login=document.getElementById("name");
             var change=` <p>${loginUser.uname}</p>`;
             div_login.innerHTML=change;
+            
             var divforsideProfile=document.getElementById("switch");
             var sideProfile_Structure=`<div>
                         <img style="width:100%;height:100%;border-radius:50%" src="${loginUser.user_Info.profile}" alt="image"/>
