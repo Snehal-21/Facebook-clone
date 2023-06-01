@@ -17,14 +17,14 @@
 
     #screen {
         width: 100%;
-        height: 700px;
-        border: 1px solid red;
+        border: 1px solid white;
         background-color: rgb(240, 242, 245);
     }
 
     #navbar {
         height: 60px;
         width: 100%;
+        position: fixed;
         /* border:1px solid green; */
         display: flex;
         justify-content: space-between;
@@ -145,11 +145,13 @@
 
     #body {
         width: 100%;
-        height: 630px;
+        /* height: 630px; */
         /* border:1px solid green; */
         display: flex;
         margin-top: 20px;
+        justify-content: space-between;
         background-color: rgb(240, 242, 245);
+        margin-top: 60px;
     }
 
     #sidebar {
@@ -157,6 +159,7 @@
         height: 630px;
         /* border:1px solid red; */
         padding: 10px;
+        position: fixed;
         /* padding-top: 10px; */
         /* margin-top: 10px; */
     }
@@ -198,20 +201,24 @@
     }
 
     #mainbody {
-        width: 60%;
+        width: 50%;
+        margin-left: 20%;
         /* height: 630px; */
         /* border:1px solid red; */
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-left: 100px;
+        padding-top: 30px;
     }
 
     #post {
         height: 550px;
-        width: 70%;
+        width: 100%;
         /* border: 1px solid red; */
         background-color: white;
         border-radius: 10px;
+        border:1px solid rgb(222, 222, 222);
     }
 
     #head {
@@ -277,15 +284,18 @@
         color: rgb(24, 23, 23);
     }
     #story_reels{
-        border:1px solid red;
-        margin-top: 100px;
-        margin-bottom: 30px;
-        width:70%
+        border:1px solid rgb(222, 222, 222);
+        /* margin-top: 250px; */
+        margin-bottom: 10px;
+        width:100%;
+        background-color: white;
+        border-radius: 10px;
     }
     #sr_head{
         height:60px;
         width:100%;
-        border:1px solid green;
+        border-bottom: 1px solid rgb(215, 213, 213);
+        /* border:1px solid green; */
         display: flex;
     }
     #sr_head>div{
@@ -303,26 +313,123 @@
     }
     #sr_body{
         display: flex;
-        padding-top: 5px;
+        padding:10px;
+        justify-content: space-between;
     }
     #sr_body>div:nth-child(1){
-        width:30%;
-        height:100px;
+        width:20%;
+        height:200px;
+        border:1px solid rgb(212, 210, 210);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #sr_body>div:nth-child(1)>img{
+        height:80%;
+        width:100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    #sr_body>div:nth-child(1)>div{
+        height:15%;
+        width:30px;
+        border-radius: 50%;
+        /* border:1px solid grey; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -18px;
+        background-color: blue;
+        color:white;
+    }
+    #sr_body>div:nth-child(1)>p{
+        font-size: 15px;
+        margin-top: 10px;
+        height:10%;
+        padding-bottom: 10px;
     }
     #sr_body>div:nth-child(2){
         width:70%;
+        padding-top: 50px;
     }
     #sr_body>div:nth-child(2)>p{
-        margin-bottom: 10px;
+        margin-bottom: 18px;
+        font-size: 14px;
+        color:rgb(70, 69, 69);
     }
     #sr_body>div:nth-child(2)>p>span{
         margin-right: 10px;
     }
+    #sr_body>div:nth-child(2)>p>span>i{
+        font-size: 18px;
+        color: black;
+    }
+    #mind{
+        border:1px solid rgb(222, 222, 222);
+        /* margin-top: 250px; */
+        margin-bottom: 10px;
+        width:100%;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    #mind_head{
+        height:60px;
+        width:100%;
+        /* border:1px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 20px;
+        border-bottom: 1px solid rgb(212, 208, 208);
+        padding-bottom: 8px;
+    }
+    #mind_head>div:nth-child(1){
+        width:8%;
+        height:80%;
+        /* border:1px solid grey; */
+        border-radius: 50%;
+    }
+    #mind_head>div:nth-child(1)>img{
+        height:100%;
+        width:100%;
+        border-radius: 50%;
+    }
+    #mind_head>div:nth-child(2){
+        width:90%;
+        height:60%;
+        /* border:1px solid rgb(203, 199, 199); */
+        border-radius: 20px;
+    }
+    #mind_head>div:nth-child(2)>input{
+        height:100%;
+        width:100%;
+        border-radius: 20px;
+        padding-left: 20px;
+        border:none;
+        outline: none;
+        font-size: 16px;
+        background-color: rgb(240,242,245);
+    }
+    #mind_body{
+        display: flex;
+        height:50px;
+    }
+    #mind_body>div{
+        width:33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #mind_body>div>p>span>i{margin-right: 10px;}
     #rightbody {
         width: 20%;
         /* height:630px; */
         /* border:1px solid green; */
         padding-right: 20px;
+        padding-top: 30px;
     }
 
     #rightbody>p {
@@ -359,7 +466,43 @@
     #rightbody>div>div:nth-child(2)>p {
         font-weight: bold;
     }
-
+    #crate_post{
+        width: 35%;
+        /* margin: auto; */
+        height: 500px;
+        border:1px solid rgb(245, 242, 242);
+        /* display: none; */
+        position: absolute;
+        z-index: 3;
+        background-color: white;
+        margin-top: -950px;
+        margin-left: 400px;
+        border-radius: 10px;
+        box-shadow: 80px 60px 300px 180px rgb(227, 226, 226);
+        /* filter:blur(5px); */
+    }
+    #create_head{
+        height:50px;
+        width:100%;
+        border:1px solid rgb(218, 215, 215);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #create_head>div:nth-child(1){
+        font-size: 25px;
+        font-weight: bold;
+        width:95%;
+        /* border:1px solid red; */
+        display: flex;
+        justify-content: center;
+    }
+    #create_head>div:nth-child(2){
+        width:5%;
+    }
+    #create_head>span{
+        margin-left: 200px;
+    }
     @media screen and (max-width:750px) {
         #navbar>div:nth-child(2) {
             width: 25%;
@@ -533,18 +676,31 @@
                         <div><p><span><i class="fa-solid fa-camera-retro"></i></span>Reels</p></div>
                     </div>
                     <div id="sr_body">
-                        <div>
-                            <div>
-                                <img src="" alt="story"/>
+                        <div id="story-img">
+                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="story"/>
                                 <div><i class="fa-solid fa-plus"></i></div>
                                 <p>Create story</p>
-                            </div>
                         </div>
                         <div>
                             <p><span><i class="fa-solid fa-copy"></i></span>Share everyday moments with friends and family.</p>
                             <p><span><i class="fa-regular fa-clock"></i></span>Stories disappear after 24 hours.</p>
                             <p><span><i class="fa-regular fa-comment-dots"></i></span>Replies and reactions are private.</p>
                         </div>
+                    </div>
+                </div>
+                <div id="mind">
+                    <div id="mind_head">
+                        <div id="mind_image">
+                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="image"/>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="What's on your mind?"/>
+                        </div>
+                    </div>
+                    <div id="mind_body">
+                        <div><p><Span><i style="color:rgb(202, 97, 115)" class="fa-solid fa-video"></i></Span>Live Video</p></div>
+                        <div onclick="myFunction()"><p><span><i style="color:green" class="fa-solid fa-image"></i></span>Photo/Video</p></div>
+                        <div><p><span><i style="color:rgb(216, 157, 38)" class="fa-regular fa-face-smile"></i></span>Feeling/Activity</p></div>
                     </div>
                 </div>
                 <div id="post">
@@ -584,7 +740,25 @@
                 </div>
             </div>
         </div>
+        <div id="crate_post">
+            <div id="create_head">
+                <div><p>Create Post</p></div>
+                <div><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            <div id="create_info">
+                <div>
+                    <div><img src="" alt=""/> </div>
+                    <div><p></p></div>
+                </div>
+                <div>
+                    <form>
+                        <input id="des" 
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+   
     <script src="https://kit.fontawesome.com/43b779b2fa.js" crossorigin="anonymous"></script>
     <script>
         window.onload = function () {
@@ -614,6 +788,16 @@
             var navProfile_Structure=`<img style="width:100%;height:100%;border-radius:50%" src="${loginUser.user_Info.profile}" alt="image" />`;
             divforNav_Profile.innerHTML=navProfile_Structure;
 
+            var divcreteStory_Image=document.getElementById("story-img");
+            var create_StoryImage=`<img src="${loginUser.user_Info.profile}" alt="story"/>
+                                <div><i class="fa-solid fa-plus"></i></div>
+                                <p>Create story</p>`;
+            divcreteStory_Image.innerHTML=create_StoryImage;
+
+            var divMind_image=document.getElementById("mind_image");
+            var mindImage_structure=`<img src="${loginUser.user_Info.profile}" alt="image"/>`;
+            divMind_image.innerHTML=mindImage_structure;
+
         }
         function logout(){
         alert("logout successful.")
@@ -621,6 +805,15 @@
         window.location.reload();
         window.location.href='./login.html';
     }
+    function myFunction() {
+            var x = document.getElementById("crate_post");
+            var y=document.getElementById("screen");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
     </script>
 </body>
 
